@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- SETUP BOOTSTAP: link to Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- link to JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<!-- Add style -->
+	<link rel="stylesheet" type="text/css" href="style.css">	
+	<title>EX#2: Area of a Triangle</title>
+
+</head>
+<body>
+	<form>
+<div class="container mt-5 mb-5">
+	<h1>Area of a Triangle</h1><hr>
+
+	<img src="https://dictionary.cambridge.org/images/thumb/triang_noun_001_18172.jpg?version=6.0.43" width="300px">
+
+		<label for="height">Enter height: </label>
+			<input type="number" class="form-control" name="theight" id="height"><br>
+
+		<label for="base">Enter base: </label>
+			<input type="number" class="form-control" name="tbase" id="base"><br>
+	
+		<h5 id="t_area">The area of the triangle is ?</h5>
+
+		<button type="button" class="btn btn-success" onClick="tri_area()">AREA</button>
+		<button type="button" class="btn btn-success" onClick="window.location.reload()">RELOAD PAGE</button>
+
+
+	
+<script type="text/javascript">
+	function tri_area() {
+	var height = document.getElementById('height').value;
+	var base = document.getElementById('base').value;
+	var area = base * height;
+	var r_area =  area.toFixed(2);
+	
+	document.getElementById('t_area').innerHTML = 'The area of the triangle is ' + r_area + '!';
+	}
+</script>
+</div>
+	</form>
+
+</body>
+</html>
+
